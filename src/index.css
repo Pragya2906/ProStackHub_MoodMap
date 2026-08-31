@@ -1,1 +1,117 @@
 @import "tailwindcss";
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --font-sans: "Work Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Fraunces", ui-serif, Georgia, serif;
+
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --color-mood-1: var(--mood-1);
+  --color-mood-2: var(--mood-2);
+  --color-mood-3: var(--mood-3);
+  --color-mood-4: var(--mood-4);
+  --color-mood-5: var(--mood-5);
+
+  --shadow-soft: 0 1px 2px oklch(0.3 0.03 60 / 0.04), 0 8px 24px oklch(0.3 0.03 60 / 0.05);
+}
+
+:root {
+  --radius: 0.75rem;
+
+  --background: oklch(0.977 0.008 85.5);
+  --foreground: oklch(0.245 0.018 60);
+  --card: oklch(0.994 0.004 90);
+  --card-foreground: oklch(0.245 0.018 60);
+  --popover: oklch(0.994 0.004 90);
+  --popover-foreground: oklch(0.245 0.018 60);
+  --primary: oklch(0.365 0.038 155);
+  --primary-foreground: oklch(0.98 0.008 90);
+  --secondary: oklch(0.94 0.012 85);
+  --secondary-foreground: oklch(0.3 0.02 60);
+  --muted: oklch(0.945 0.011 85);
+  --muted-foreground: oklch(0.505 0.018 65);
+  --accent: oklch(0.925 0.021 120);
+  --accent-foreground: oklch(0.28 0.03 145);
+  --destructive: oklch(0.505 0.15 27);
+  --destructive-foreground: oklch(0.98 0.008 90);
+  --border: oklch(0.893 0.012 82);
+  --input: oklch(0.893 0.012 82);
+  --ring: oklch(0.5 0.05 155);
+
+  /* Mood intensity ramp: warm clay (low) -> deep green (high) */
+  --mood-empty: oklch(0.928 0.008 85);
+  --mood-1: oklch(0.82 0.062 45);
+  --mood-2: oklch(0.845 0.075 85);
+  --mood-3: oklch(0.79 0.075 125);
+  --mood-4: oklch(0.63 0.085 148);
+  --mood-5: oklch(0.44 0.075 155);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-serif);
+    font-weight: 500;
+  }
+}
+
+/* Heatmap + legend swatches share one token-driven class per mood level. */
+.mood-cell-0 {
+  background-color: var(--mood-empty);
+}
+.mood-cell-1 {
+  background-color: var(--mood-1);
+}
+.mood-cell-2 {
+  background-color: var(--mood-2);
+}
+.mood-cell-3 {
+  background-color: var(--mood-3);
+}
+.mood-cell-4 {
+  background-color: var(--mood-4);
+}
+.mood-cell-5 {
+  background-color: var(--mood-5);
+}
