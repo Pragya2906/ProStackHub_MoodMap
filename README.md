@@ -32,7 +32,7 @@ npm install
 npm run dev
 ```
 
-Opens at `[http://localhost:5173](https://moodmap-journal.netlify.app/)`.
+Opens at `[(https://moodmap-journal.netlify.app/)]`.
 
 ## Build
 
