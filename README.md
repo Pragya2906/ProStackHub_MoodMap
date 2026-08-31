@@ -53,6 +53,4 @@ src/
   App.jsx         nav between the three pages (plain state, no router)
 ```
 
-## Screenshots
 
-_adding these once deployed_
