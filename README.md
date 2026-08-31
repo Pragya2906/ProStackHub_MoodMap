@@ -26,13 +26,13 @@ Journal entries are structured data that grows over a year of daily use. Indexed
 ## Running it locally
 
 ```bash
-git clone <your-repo-url>
+git clone <[your-repo-url](https://github.com/Pragya2906/ProStackHub_MoodMap)>
 cd ProStackHub_MoodMap
 npm install
 npm run dev
 ```
 
-Opens at `http://localhost:5173`.
+Opens at [https://moodmap-journal.netlify.app/](https://moodmap-journal.netlify.app/)
 
 ## Build
 
@@ -53,6 +53,4 @@ src/
   App.jsx         nav between the three pages (plain state, no router)
 ```
 
-## Screenshots
 
-_adding these once deployed_
