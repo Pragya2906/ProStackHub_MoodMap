@@ -1,5 +1,4 @@
 import { useState } from "react";
-
 import { SiteHeader } from "@/components/SiteHeader";
 import { DashboardPage } from "@/components/pages/DashboardPage";
 import { JournalPage } from "@/components/pages/JournalPage";
